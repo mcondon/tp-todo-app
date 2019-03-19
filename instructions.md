@@ -1,6 +1,6 @@
 # Front End Skill Assessment
 
-As we prepare for our upcoming athlete funnel projects, I would like to gain a better understanding of our technical skill level. Most of our recent work has either not involved building UI components and applications from scratch, or it has been so encumbered by technical debt or organizational debt, that it is hard to guage our true technical potential.
+As we prepare for our upcoming super secret projects, I would like to gain a better understanding of our technical skill level. Most of our recent work has either not involved building UI components and applications from scratch, or it has been so encumbered by technical debt or organizational debt, that it is hard to guage our true technical potential.
 
 So, I created this simple challenge, based on TodoMVC, with a few constraints. 
 

@@ -1,7 +1,17 @@
 
+
 # TP Todo App
+
+This is my attempt to implement the project I'm assigning people for a skill assessment. See [instructions.md] for project instructions
+
+## Notes
+
 - haven't created a react app from scratch in some time
+- have never had good success with `create-react-app`, but will try it again
 - also haven't used redux beyond any tutorials or very small learning projects
+
+## Timeline
+
 - started 2019-03-18 18:55
 - 19:20
     - had used create-react-app, plus a quick tutorial online, to create a react redux app hello world
@@ -16,9 +26,8 @@
     - stupid React should just give us a damn ES6 module
 
 
-# To Do
-- starter kit
-    - react redux hello world
+## To Do
+
 - unit tests
     - add jest
     - add tests for all requirements, including storage
