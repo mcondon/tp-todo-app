@@ -10,7 +10,7 @@ This is my attempt to implement the project I'm assigning people for a skill ass
 - have never had good success with `create-react-app`, but will try it again
 - also haven't used redux beyond any tutorials or very small learning projects
 
-## Timeline
+## Timeline / Monologue
 
 - started 2019-03-18 18:55
 - 19:20
@@ -36,8 +36,11 @@ This is my attempt to implement the project I'm assigning people for a skill ass
     - Rant: Babel should be optional!
     - Rant: Jest is slow, and `jest --watch` hangs
 - 20:20
+    - Rant: why isn't there yet a simple node.js test runner that runs es6 modules from src without babel?
     - Probably should not write my own test runner, but wrote simplest possible runner anyway
     - back to TDD. got `newTodo` function tested
+- 20:26
+    - Rant: now VSCode is stupid slow for no reason. restart it. I should just only use vim.
 
 ## To Do
 

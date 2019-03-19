@@ -1,6 +1,6 @@
 import newTodo from '../todos/new-todo.js'
 
-export default function(test, assert) {
+export default function testNewTodo(test, assert) {
 
     test('newTodo', () => {
 
