@@ -35,7 +35,8 @@ function TodoListManager({
             TodoListHeader,
             {
                 addTodo,
-                toggleAllTodos
+                toggleAllTodos,
+                allComplete: totalCount > 0 && incompleteCount === 0
             }
         ),
         filteredTodos.map(todo => {

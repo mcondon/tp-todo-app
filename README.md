@@ -56,16 +56,18 @@ This is my attempt to implement the project I'm assigning people for a skill ass
 - 06:43
     - finished toggle one, toggle all, count, filter
     - Rant: forgot how many layers of boilerplate, and how many layers of potential small errors
-
+- 07:05
+    - added local storage middleware, and get initial state from local storage
 ## To Do
-- local storage
-- review functional requirements
+    - header icon state based on count
 - UI
+    - icons: minimal icon set
+    - fonts, colors
+    - styles
     - simple flat theme
     - css vars
     - css
     - delete only on hover
-    - header icon state based on count
     - complete checkbox and strikethrough
     - icons
 - time expectations

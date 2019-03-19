@@ -7,7 +7,8 @@ const h = React.createElement
 function TodoListHeader({
 
     addTodo,
-    toggleAllTodos
+    toggleAllTodos,
+    allComplete
 
 }) {
     return h(
@@ -19,7 +20,7 @@ function TodoListHeader({
               className: 'todo-list-manager__toggle-all-todos',
               onClick: toggleAllTodos
           },
-          'X'
+          allComplete ? 'O' : 'X'
         ),
         h(
           TextInput,
@@ -33,7 +34,8 @@ function TodoListHeader({
 
 TodoListHeader.propTypes = {
     addTodo: PropTypes.func.isRequired,
-    toggleAllTodos: PropTypes.func.isRequired
+    toggleAllTodos: PropTypes.func.isRequired,
+    allComplete: PropTypes.bool.isRequired
 }
 
 export default TodoListHeader
