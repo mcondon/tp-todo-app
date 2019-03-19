@@ -31,12 +31,16 @@ This is my attempt to implement the project I'm assigning people for a skill ass
 - 19:51
     - using global jest cli test runner, in the spirit of keeping this project npm free, just because I can
     - set up a sample test to verify test runner works
+- 20:01
+    - tried to do some simple TDD for my reducers, but realized I need babel
+    - Rant: Babel should be optional!
+    - Rant: Jest is slow, and `jest --watch` hangs
+- 20:20
+    - Probably should not write my own test runner, but wrote simplest possible runner anyway
+    - back to TDD. got `newTodo` function tested
 
 ## To Do
 
-- unit tests
-    - add jest
-    - add tests for all requirements, including storage
 - UI
     - add cosmos
     - build all UI components
