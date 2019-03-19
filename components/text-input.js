@@ -26,15 +26,14 @@ class TextInput extends Component {
                 type: 'text',
                 onChange: (e) => this.setState({ value: e.target.value }),
                 onKeyUp: (e) => {
-                    if(e.key === 'Escape' && onEscape) {
-                        onEscape(e)
+                    if(e.key === 'Escape') {
+                        onEscape && onEscape(e)
                         this.setState({ value: '' })
                     } else if(
                         e.key === 'Enter' &&
-                        onEnter &&
                         e.target.value.trim()
                     ) {
-                        onEnter(e)
+                        onEnter && onEnter(e)
                         this.setState({ value: '' })
                     }
                 },

@@ -43,6 +43,8 @@ This is my attempt to implement the project I'm assigning people for a skill ass
     - Rant: now VSCode is stupid slow for no reason. restart it. I should just only use vim.
 - 21:11
     - Completed reasonably well tested data manipulation functions that I will use in my reducers
+- 22:20
+    - Forgot how not fun Redux boilerplate is. Got a basic input + display working
 
 ## To Do
 
