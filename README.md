@@ -24,7 +24,13 @@ This is my attempt to implement the project I'm assigning people for a skill ass
 - 19:35
     - thought I was good to go, just using react from cdn, but forgot I needed a UMD version
     - stupid React should just give us a damn ES6 module
-
+- 19:48
+    - back in action for real now
+    - hello world app works
+    - github repo created
+- 19:51
+    - using global jest cli test runner, in the spirit of keeping this project npm free, just because I can
+    - set up a sample test to verify test runner works
 
 ## To Do
 
