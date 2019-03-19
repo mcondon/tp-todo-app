@@ -9,7 +9,7 @@ export default function configureStore() {
     filter: FILTER_TODOS_ALL,
     filteredTodos: [],
     incompleteCount: 0,
-    editing: null
+    currentlyEditingId: null
   }
 
   return createStore(reducer, initialState)

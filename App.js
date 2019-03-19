@@ -3,7 +3,10 @@ import { connect } from '/react/react-redux.js'
 import TodoListManager from '/components/todo-list-manager.js'
 import {
   addTodo,
-  removeTodo
+  removeTodo,
+  editTodo,
+  cancelEditTodo,
+  updateTodoTitle
 } from './todo-list-redux/todo-action-creators.js'
 
 const h = React.createElement
@@ -12,7 +15,10 @@ const mapStateToProps = state => ({...state})
 
 const mapDispatchToProps = dispatch => ({
   addTodo: title => dispatch(addTodo(title)),
-  removeTodo: id => dispatch(removeTodo(id))
+  removeTodo: id => dispatch(removeTodo(id)),
+  editTodo: id => dispatch(editTodo(id)),
+  cancelEditTodo: id => dispatch(cancelEditTodo(id)),
+  updateTodoTitle: (id, title) => dispatch(updateTodoTitle(id, title))
 })
 
 class App extends Component {

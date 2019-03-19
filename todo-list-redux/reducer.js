@@ -54,6 +54,15 @@ export default (state = {}, action) => {
       return filteredAndCounted(state, { todos: addTodo(state.todos, newTodo(action.title)) })
     case REMOVE_TODO:
       return filteredAndCounted(state, { todos: removeTodo(state.todos, action.id) })
+    case EDIT_TODO:
+      return Object.assign({}, state, { currentlyEditingId: action.id })
+    case CANCEL_EDIT_TODO:
+      return Object.assign({}, state, { currentlyEditingId: null })
+    case UPDATE_TODO_TITLE:
+      return filteredAndCounted(
+        state,
+        { todos: updateTodo(state.todos, action.id, todo => setTitle(todo, action.title )), currentlyEditingId: null }
+      )
     default:
       return state
   }

@@ -8,7 +8,11 @@ const h = React.createElement
 function TodoListManager({
     filteredTodos,
     addTodo,
-    removeTodo
+    removeTodo,
+    editTodo,
+    cancelEditTodo,
+    updateTodoTitle,
+    currentlyEditingId
 }) {
     return h(
         'div',
@@ -20,15 +24,32 @@ function TodoListManager({
               onEnter: (e) => addTodo(e.target.value.trim())
           }
         ),
-        filteredTodos.map(todo => h(Todo, { key: todo.id, todo, removeTodo }))
+        filteredTodos.map(todo => {
+            return h(
+                Todo,
+                {
+                    key: todo.id,
+                    todo,
+                    editing: todo.id === currentlyEditingId,
+                    removeTodo,
+                    editTodo,
+                    cancelEditTodo,
+                    updateTodoTitle
+                }
+            )
+        })
     )
 }
 
 TodoListManager.propTypes = {
     filteredTodos: PropTypes.array.isRequired,
+    currentlyEditingId: PropTypes.string,
 
     addTodo: PropTypes.func.isRequired,
-    removeTodo: PropTypes.func.isRequired
+    removeTodo: PropTypes.func.isRequired,
+    editTodo: PropTypes.func.isRequired,
+    cancelEditTodo: PropTypes.func.isRequired,
+    updateTodoTitle: PropTypes.func.isRequired
 }
 
 export default TodoListManager

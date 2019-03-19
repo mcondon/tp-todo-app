@@ -45,12 +45,23 @@ This is my attempt to implement the project I'm assigning people for a skill ass
     - Completed reasonably well tested data manipulation functions that I will use in my reducers
 - 22:20
     - Forgot how not fun Redux boilerplate is. Got a basic input + display working
+- 22:47
+    - add, edit, delete working
+    - next up: toggle one, toggle all, filter - should be very quick
+    - stopping for the night, total time so far 4 hours
+    - took longer so far than I thought it might, partly because it's been a while since I did any redux
+    - something like this is where some code generation and boilerplate reduction would help
+    - probably also need some unit tests / more function extraction on the reducer
 
 ## To Do
-
-- UI
-    - build all UI components
-- build app
-- UI
-    - make it look good
+- toggle one
+- toggle all
+- filter
+- compose reducers, or reselect?
+- derived state = reselect
 - review requirements
+- UI
+    - css vars
+    - css
+    - icons
+- time expectations

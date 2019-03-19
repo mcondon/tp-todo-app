@@ -1,5 +1,6 @@
 import PropTypes from '/react/prop-types.js'
 import { Component } from '/react/react.js'
+import ReactDOM from '/react/react-dom.js'
 const h = React.createElement
 
 class TextInput extends Component {
@@ -7,6 +8,12 @@ class TextInput extends Component {
     constructor(props) {
         super(props)
         this.state = { value: props.value || '' }
+    }
+
+    componentDidMount() {
+        if(this.props.focused) {
+            ReactDOM.findDOMNode(this).focus()
+        }
     }
 
     render() {
