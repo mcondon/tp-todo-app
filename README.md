@@ -41,11 +41,14 @@ This is my attempt to implement the project I'm assigning people for a skill ass
     - back to TDD. got `newTodo` function tested
 - 20:26
     - Rant: now VSCode is stupid slow for no reason. restart it. I should just only use vim.
+- 21:11
+    - Completed reasonably well tested data manipulation functions that I will use in my reducers
 
 ## To Do
 
 - UI
-    - add cosmos
     - build all UI components
 - build app
+- UI
+    - make it look good
 - review requirements

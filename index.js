@@ -1,7 +1,7 @@
 import React from '/react/react.js'
 import ReactDOM from '/react/react-dom.js'
 import { Provider } from '/react/react-redux.js'
-import configureStore from './simple-redux/simpleStore.js'
+import configureStore from './todo-list-redux/store.js'
 import App from './App.js'
 
 const h = React.createElement
