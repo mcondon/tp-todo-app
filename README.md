@@ -52,16 +52,26 @@ This is my attempt to implement the project I'm assigning people for a skill ass
     - took longer so far than I thought it might, partly because it's been a while since I did any redux
     - something like this is where some code generation and boilerplate reduction would help
     - probably also need some unit tests / more function extraction on the reducer
+- 2019-03-19 06:00 started again
+- 06:43
+    - finished toggle one, toggle all, count, filter
+    - Rant: forgot how many layers of boilerplate, and how many layers of potential small errors
 
 ## To Do
-- toggle one
-- toggle all
-- filter
-- compose reducers, or reselect?
-- derived state = reselect
-- review requirements
+- local storage
+- review functional requirements
 - UI
+    - simple flat theme
     - css vars
     - css
+    - delete only on hover
+    - header icon state based on count
+    - complete checkbox and strikethrough
     - icons
 - time expectations
+
+## Potential Refactoring
+- compose reducers
+- use reselect for some of the derived props
+- make some of the editor functions more functional
+    `updateTodos(todos, id, setComplete(false))` instead of `updateTodos(todos, id, todo => setComplete(todo, false))`

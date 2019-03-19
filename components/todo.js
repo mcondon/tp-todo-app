@@ -9,12 +9,22 @@ function Todo({
     removeTodo,
     editTodo,
     cancelEditTodo,
-    updateTodoTitle
+    updateTodoTitle,
+    setTodoComplete,
+    setTodoIncomplete
 }) {
     const { id, title } = todo
     return h(
         'div',
         { className: 'todo-list-manager__todo' },
+        h(
+            'i',
+            {
+                className: `todo-list-manager__todo-toggle todo-list-manager__todo-toggle--${todo.complete ? 'complete' : 'incomplete'}`,
+                onClick: todo.complete ? () => setTodoIncomplete(id) : () => setTodoComplete(id)
+            },
+            todo.complete ? 'C' : 'I'
+        ),
         editing ?
             h(TextInput, { focused: true, value: todo.title, onEscape: () => cancelEditTodo(id), onEnter: (e) => updateTodoTitle(id, e.target.value) }) :
             h('div', { onDoubleClick: () => editTodo(id), }, title),
@@ -28,7 +38,9 @@ Todo.propTypes = {
     removeTodo: PropTypes.func.isRequired,
     editTodo: PropTypes.func.isRequired,
     cancelEditTodo: PropTypes.func.isRequired,
-    updateTodoTitle: PropTypes.func.isRequired
+    updateTodoTitle: PropTypes.func.isRequired,
+    setTodoComplete: PropTypes.func.isRequired,
+    setTodoIncomplete: PropTypes.func.isRequired
 }
 
 export default Todo

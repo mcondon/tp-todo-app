@@ -37,13 +37,15 @@ function filteredAndCounted(state, updates) {
   state = Object.assign({}, state, updates)
   let filteredTodos = filter(state.todos, state.filter)
   let incompleteCount = getIncompleteTodos(state.todos).length
+  let totalCount = state.todos.length
 
   return Object.assign(
     {},
     state,
     {
       filteredTodos,
-      incompleteCount
+      incompleteCount,
+      totalCount
     }
   )
 }
@@ -63,6 +65,18 @@ export default (state = {}, action) => {
         state,
         { todos: updateTodo(state.todos, action.id, todo => setTitle(todo, action.title )), currentlyEditingId: null }
       )
+    case SET_TODO_COMPLETE:
+      return filteredAndCounted(state, { todos: updateTodo(state.todos, action.id, todo => setComplete(todo, true) ) })
+    case SET_TODO_INCOMPLETE:
+      return filteredAndCounted(state, { todos: updateTodo(state.todos, action.id, todo => setComplete(todo, false) ) })
+    case TOGGLE_ALL_TODOS:
+      return filteredAndCounted(state, { todos: toggleAllTodos(state.todos) })
+    case FILTER_TODOS_ALL:
+      return filteredAndCounted(state, { filter: FILTER_TODOS_ALL })
+    case FILTER_TODOS_COMPLETE:
+      return filteredAndCounted(state, { filter: FILTER_TODOS_COMPLETE })
+    case FILTER_TODOS_INCOMPLETE:
+      return filteredAndCounted(state, { filter: FILTER_TODOS_INCOMPLETE })
     default:
       return state
   }

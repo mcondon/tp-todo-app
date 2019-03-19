@@ -1,28 +1,42 @@
 import PropTypes from '/react/prop-types.js'
 import React from '/react/react.js'
+import TodoListHeader from './todo-list-header.js'
+import TodoListFooter from './todo-list-footer.js'
 import Todo from './todo.js'
-import TextInput from './text-input.js'
 
 const h = React.createElement
 
 function TodoListManager({
+
     filteredTodos,
+    currentlyEditingId,
+    incompleteCount,
+    totalCount,
+
     addTodo,
     removeTodo,
     editTodo,
     cancelEditTodo,
     updateTodoTitle,
-    currentlyEditingId
+
+    setTodoComplete,
+    setTodoIncomplete,
+    toggleAllTodos,
+
+    filterTodosAll,
+    filterTodosComplete,
+    filterTodosIncomplete
+
 }) {
     return h(
         'div',
         { className: 'todo-list-manager' },
         h(
-          TextInput,
-          {
-              className: 'todo-list-manager__add-todo',
-              onEnter: (e) => addTodo(e.target.value.trim())
-          }
+            TodoListHeader,
+            {
+                addTodo,
+                toggleAllTodos
+            }
         ),
         filteredTodos.map(todo => {
             return h(
@@ -34,22 +48,46 @@ function TodoListManager({
                     removeTodo,
                     editTodo,
                     cancelEditTodo,
-                    updateTodoTitle
+                    updateTodoTitle,
+                    setTodoComplete,
+                    setTodoIncomplete
                 }
             )
-        })
+        }),
+        h(
+            TodoListFooter,
+            {
+                incompleteCount,
+                totalCount,
+                filterTodosAll,
+                filterTodosComplete,
+                filterTodosIncomplete
+            }
+        )
     )
 }
 
 TodoListManager.propTypes = {
+
+    filter: PropTypes.string.isRequired,
     filteredTodos: PropTypes.array.isRequired,
+    incompleteCount: PropTypes.number.isRequired,
+    totalCount: PropTypes.number.isRequired,
     currentlyEditingId: PropTypes.string,
 
     addTodo: PropTypes.func.isRequired,
     removeTodo: PropTypes.func.isRequired,
     editTodo: PropTypes.func.isRequired,
     cancelEditTodo: PropTypes.func.isRequired,
-    updateTodoTitle: PropTypes.func.isRequired
+    updateTodoTitle: PropTypes.func.isRequired,
+
+    setTodoComplete: PropTypes.func.isRequired,
+    setTodoIncomplete: PropTypes.func.isRequired,
+    toggleAllTodos: PropTypes.func.isRequired,
+
+    filterTodosAll: PropTypes.func.isRequired,
+    filterTodosComplete: PropTypes.func.isRequired,
+    filterTodosIncomplete: PropTypes.func.isRequired
 }
 
 export default TodoListManager

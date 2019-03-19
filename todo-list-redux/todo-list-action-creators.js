@@ -18,6 +18,5 @@ export const filterTodosIncomplete = () => ({
 })
 
 export const toggleAllTodos = () => ({
-  type: TOGGLE_ALL_TODOS,
-  id
+  type: TOGGLE_ALL_TODOS
 })

@@ -9,6 +9,7 @@ export default function configureStore() {
     filter: FILTER_TODOS_ALL,
     filteredTodos: [],
     incompleteCount: 0,
+    totalCount: 0,
     currentlyEditingId: null
   }
 
