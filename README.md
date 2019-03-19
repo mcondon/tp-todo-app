@@ -59,7 +59,7 @@ This is my attempt to implement the project I'm assigning people for a skill ass
 - 07:05
     - added local storage middleware, and get initial state from local storage
 ## To Do
-    - header icon state based on count
+- delete if empty
 - UI
     - icons: minimal icon set
     - fonts, colors

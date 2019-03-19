@@ -32,7 +32,7 @@ function TodoListFooter({
         h(
             'button',
             {
-                className: `todo-list-manager__filter ${filter === FILTER_TODOS_ALL ? 'todo-list-manager__filter--active' : ''} todo-list-manager__filter--all`,
+                className: `todo-list-manager__filter ${filter === FILTER_TODOS_ALL ? 'todo-list-manager__filter--selected' : ''} todo-list-manager__filter--all`,
                 onClick: filterTodosAll
             },
             'All'
@@ -40,7 +40,7 @@ function TodoListFooter({
         h(
             'button',
             {
-                className: `todo-list-manager__filter ${filter === FILTER_TODOS_COMPLETE ? 'todo-list-manager__filter--active' : ''} todo-list-manager__filter--complete`,
+                className: `todo-list-manager__filter ${filter === FILTER_TODOS_COMPLETE ? 'todo-list-manager__filter--selected' : ''} todo-list-manager__filter--complete`,
                 onClick: filterTodosComplete
             },
             'Complete'
@@ -48,7 +48,7 @@ function TodoListFooter({
         h(
             'button',
             {
-                className: `todo-list-manager__filter ${filter === FILTER_TODOS_INCOMPLETE ? 'todo-list-manager__filter--active' : ''} todo-list-manager__filter--incomplete`,
+                className: `todo-list-manager__filter ${filter === FILTER_TODOS_INCOMPLETE ? 'todo-list-manager__filter--selected' : ''} todo-list-manager__filter--incomplete`,
                 onClick: filterTodosIncomplete
             },
             'Incomplete'

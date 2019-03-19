@@ -1,0 +1,23 @@
+@import './todo-list-icons.css';
+@import './vars.css';
+@import './todo.css';
+@import './header.css';
+@import './footer.css';
+
+body {
+    background-color: var(--color-bg-inverse);
+    color: var(--color-font-inverse);
+    font-family: var(--font-family);
+    font-size: var(--font-size-normal);
+    padding: 30px;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list-manager {
+    width: 50vw;
+    min-width: 400px;
+}

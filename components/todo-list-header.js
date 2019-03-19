@@ -13,21 +13,22 @@ function TodoListHeader({
 }) {
     return h(
         'div',
-        { className: 'todo-list-manager__header' },
+        { className: `todo-list-manager__header todo-list-manager__header--${allComplete ? 'complete' : 'incomplete'}` },
+        h('h1', { className: 'todo-list-manager__header-title' }, 'todo list' ),
         h(
-          'i',
-          {
-              className: 'todo-list-manager__toggle-all-todos',
-              onClick: toggleAllTodos
-          },
-          allComplete ? 'O' : 'X'
+            'i',
+            {
+                className: 'icon-check todo-list-manager__toggle-all-todos',
+                onClick: toggleAllTodos
+            }
         ),
         h(
-          TextInput,
-          {
-              className: 'todo-list-manager__add-todo',
-              onEnter: (e) => addTodo(e.target.value.trim())
-          }
+            TextInput,
+            {
+                className: 'todo-list-manager__add-todo',
+                placeholder: 'add todo',
+                onEnter: (e) => (e.target.value.trim() && addTodo(e.target.value.trim()))
+            }
         )
     )
 }

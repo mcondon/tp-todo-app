@@ -16,19 +16,37 @@ function Todo({
     const { id, title } = todo
     return h(
         'div',
-        { className: 'todo-list-manager__todo' },
+        { className: `todo-list-manager__todo todo-list-manager__todo--${todo.complete ? 'complete' : 'incomplete'}` },
         h(
             'i',
             {
-                className: `todo-list-manager__todo-toggle todo-list-manager__todo-toggle--${todo.complete ? 'complete' : 'incomplete'}`,
+                className: 'icon-check todo-list-manager__todo-toggle',
                 onClick: todo.complete ? () => setTodoIncomplete(id) : () => setTodoComplete(id)
-            },
-            todo.complete ? 'C' : 'I'
+            }
         ),
         editing ?
-            h(TextInput, { focused: true, value: todo.title, onEscape: () => cancelEditTodo(id), onEnter: (e) => updateTodoTitle(id, e.target.value) }) :
-            h('div', { onDoubleClick: () => editTodo(id), }, title),
-        h('div', { onClick: () => removeTodo(id) }, 'X')
+            h(
+                TextInput,
+                {
+                    className: 'todo-list-manager__todo-edit',
+                    focused: true,
+                    value: todo.title,
+                    onEscape: () => cancelEditTodo(id),
+                    onEnter: (e) => e.target.value.trim() ? updateTodoTitle(id, e.target.value.trim()) : removeTodo(id)
+                }
+            ) :
+            h(
+                'div',
+                { className: 'todo-list-manager__todo-view', onDoubleClick: todo.complete ? undefined : () => editTodo(id), },
+                title
+            ),
+        h(
+            'div',
+            {
+                className: 'icon-delete todo-list-manager__todo-delete',
+                onClick: () => removeTodo(id)
+            }
+        )
     )
 }
 

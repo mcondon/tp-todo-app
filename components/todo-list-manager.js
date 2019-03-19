@@ -8,6 +8,7 @@ const h = React.createElement
 
 function TodoListManager({
 
+    filter,
     filteredTodos,
     currentlyEditingId,
     incompleteCount,
@@ -58,6 +59,7 @@ function TodoListManager({
         h(
             TodoListFooter,
             {
+                filter,
                 incompleteCount,
                 totalCount,
                 filterTodosAll,

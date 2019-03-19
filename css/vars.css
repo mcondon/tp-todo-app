@@ -1,0 +1,24 @@
+:root {
+    --color-grey: #CCCCCC;
+    --color-red: red;
+    --color-green: green;
+
+    --color-bg: white;
+    --color-bg-inverse: darkblue;
+
+    --color-border: rgba(0, 0, 0, 0.65);
+    --color-border-subtle: rgba(0, 0, 0, 0.25);
+    --color-border-inverse: rgba(255, 255, 255, 0.65);
+    --color-border-inverse-subtle: rgba(255, 255, 255, 0.25);
+
+    --color-font: rgba(0, 0, 0, 0.87);
+    --color-font-inverse: rgba(255, 255, 255, 0.87);
+    --color-font-subtle: rgba(0, 0, 0, 0.5);
+    --color-font-inverse-subtle: rgba(255, 255, 255, 0.5);
+
+    --font-size-normal: 16px;
+    --font-size-large: 24px;
+    --font-size-header: 64px;
+
+    --font-family: sans-serif;
+}

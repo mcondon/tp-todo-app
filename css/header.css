@@ -1,0 +1,45 @@
+
+.todo-list-manager__header {
+    margin-bottom: 24px;
+}
+
+.todo-list-manager__header-title {
+    color: var(--color-font-inverse);
+    font-size: var(--font-size-header);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.todo-list-manager__toggle-all-todos {
+    font-size: var(--font-size-large);
+    margin-right: 12px;
+}
+
+.todo-list-manager__header .todo-list-manager__toggle-all-todos {
+    color: var(--color-grey);
+    cursor: pointer;
+}
+
+.todo-list-manager__header--complete .todo-list-manager__toggle-all-todos {
+    color: var(--color-green);
+}
+
+.todo-list-manager__add-todo {
+    background-color: var(--color-bg-inverse);
+    border: 1px solid var(--color-border-inverse-subtle);
+    box-sizing: border-box;
+    color: var(--color-font-inverse);
+    font-size: var(--font-size-large);
+    outline: none;
+    padding: 8px;
+    width: calc(100% - 50px)
+}
+
+.todo-list-manager__add-todo:hover,
+.todo-list-manager__add-todo:focus {
+    border-color: var(--color-border-inverse);
+}
+
+.todo-list-manager__add-todo::placeholder {
+  color: var(--color-font-inverse-subtle);
+}

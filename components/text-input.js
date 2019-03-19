@@ -21,7 +21,9 @@ class TextInput extends Component {
         const {
             className,
             onEnter,
-            onEscape
+            onEscape,
+            placeholder
+
         } = this.props;
 
         const { value } = this.state
@@ -37,14 +39,14 @@ class TextInput extends Component {
                         onEscape && onEscape(e)
                         this.setState({ value: '' })
                     } else if(
-                        e.key === 'Enter' &&
-                        e.target.value.trim()
+                        e.key === 'Enter'
                     ) {
                         onEnter && onEnter(e)
                         this.setState({ value: '' })
                     }
                 },
-                value
+                value,
+                placeholder
             }
         )
     }
@@ -54,7 +56,8 @@ TextInput.propTypes = {
     className: PropTypes.string,
     value: PropTypes.string,
     onEnter: PropTypes.func,
-    onEscape: PropTypes.func
+    onEscape: PropTypes.func,
+    placeholder: PropTypes.string
 }
 
 export default TextInput
