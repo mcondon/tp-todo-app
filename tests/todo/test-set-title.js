@@ -1,4 +1,4 @@
-import setTitle from '../todos/set-title.js'
+import setTitle from '/todo/set-title.js'
 
 export default function testSetTitle(test, assert) {
 

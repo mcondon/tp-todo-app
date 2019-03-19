@@ -1,4 +1,4 @@
-import newTodo from '../todos/new-todo.js'
+import newTodo from '/todo/new-todo.js'
 
 export default function testNewTodo(test, assert) {
 
@@ -9,15 +9,15 @@ export default function testNewTodo(test, assert) {
         })
 
         test('Should have a title', () => {
-            assert(newTodo('test').title === 'test', 'should have a title')
+            assert(newTodo('test').title === 'test', 'expected title === test')
         })
 
         test('Should have an id', () => {
-            assert(typeof newTodo('test').id !== 'undefined', 'should have an id')
+            assert(typeof newTodo('test').id !== 'undefined', 'expected id')
         })
 
         test('Should have a complete flag', () => {
-            assert(typeof newTodo('test').complete === false, 'should have a completed flag')
+            assert(newTodo('test').complete === false, 'expected complete === false')
         })
 
         test('Should have a unique id for every item', () => {

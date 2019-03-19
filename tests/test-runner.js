@@ -24,6 +24,7 @@ function run() {
             green(`${title}: PASS`)
         } catch(e) {
             red(`${title}: FAIL`)
+            console.log(e.message)
             failed++
         }
     }
