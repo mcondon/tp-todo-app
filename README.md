@@ -2,7 +2,7 @@
 
 # TP Todo App
 
-This is my attempt to implement the project I'm assigning people for a skill assessment. See [instructions.md] for project instructions
+This is my attempt to implement the project I'm assigning people for a skill assessment. See [instructions.md](instructions.md) for project instructions
 
 ## Notes
 
