@@ -4,6 +4,12 @@
 
 This is my attempt to implement the project I'm assigning people for a skill assessment. See [instructions.md](instructions.md) for project instructions
 
+## To Serve
+- start your development server of choice, and load up index.html. No need to build / transpile / bundle / whatever
+
+## To Test
+- `node es6.js tests/test.js`
+
 ## Notes
 
 - thoughts before starting:
@@ -77,22 +83,11 @@ This is my attempt to implement the project I'm assigning people for a skill ass
 - 08:30
     - finished styling, and a couple minor additions and bug fixes
 
-## To Do
-- delete if empty
-- UI
-    - icons: minimal icon set
-    - fonts, colors
-    - styles
-    - simple flat theme
-    - css vars
-    - css
-    - delete only on hover
-    - complete checkbox and strikethrough
-    - icons
-- time expectations
-
 ## Potential Refactoring
 - compose reducers
 - use reselect for some of the derived props
 - make some of the editor functions more functional
     `updateTodos(todos, id, setComplete(false))` instead of `updateTodos(todos, id, todo => setComplete(todo, false))`
+- other reducer cleanup / refactoring
+- any way to reduce boilerplate?
+
