@@ -52,6 +52,8 @@ export default (state = {}, action) => {
   switch (action.type) {
     case ADD_TODO:
       return filteredAndCounted(state, { todos: addTodo(state.todos, newTodo(action.title)) })
+    case REMOVE_TODO:
+      return filteredAndCounted(state, { todos: removeTodo(state.todos, action.id) })
     default:
       return state
   }

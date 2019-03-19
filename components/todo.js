@@ -3,18 +3,21 @@ import React from '/react/react.js'
 const h = React.createElement
 
 function Todo({
-    id,
-    title
+    todo,
+    removeTodo
 }) {
+    const { id, title } = todo
     return h(
         'div',
-        { key: id, className: 'todo-list-manager__todo' },
-        title
+        { className: 'todo-list-manager__todo' },
+        title,
+        h('div', { onClick: () => removeTodo(id) }, 'X')
     )
 }
 
 Todo.propTypes = {
-    todo: PropTypes.object.isRequired
+    todo: PropTypes.object.isRequired,
+    onRemove: PropTypes.func.isRequired
 }
 
 export default Todo
