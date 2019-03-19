@@ -22,6 +22,14 @@ import setTitle from '/todo/set-title.js'
 import toggleAllTodos from '/todo-list/toggle-all-todos.js'
 import updateTodo from '/todo-list/update-todo.js'
 
+  const initialState = {
+    todos: [],
+    filter: FILTER_TODOS_ALL,
+    filteredTodos: [],
+    incompleteCount: 0,
+    totalCount: 0,
+    currentlyEditingId: null
+  }
 function filter(todos, filterType) {
   switch(filterType) {
     case FILTER_TODOS_COMPLETE:

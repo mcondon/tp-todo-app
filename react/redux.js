@@ -1,5 +1,5 @@
 const Redux = window.Redux
 
-const { createStore, combineReducers } = Redux
+const { createStore, combineReducers, applyMiddleware } = Redux
 
-export { createStore, combineReducers }
+export { createStore, combineReducers, applyMiddleware }
