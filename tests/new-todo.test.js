@@ -16,6 +16,10 @@ export default function testNewTodo(test, assert) {
             assert(typeof newTodo('test').id !== 'undefined', 'should have an id')
         })
 
+        test('Should have a complete flag', () => {
+            assert(typeof newTodo('test').complete === false, 'should have a completed flag')
+        })
+
         test('Should have a unique id for every item', () => {
             const id1 = newTodo('test').id
             const id2 = newTodo('test').id
